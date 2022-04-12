@@ -26,25 +26,32 @@ int main() {
     try {
         yearsWorkedNumber = std::stoi(yearsWorkedString);
         if (yearsWorkedNumber >= 5) {
-            std::cout << "CONGRATULATIONS! You are eligible for a bonus this year!! :)\n";
+            std::cout << "CONGRATULATIONS! You are eligible for a bonus"
+            " this year!! :)\n";
             std::cout << "Enter your salary: $";
             std::cin >> salary;
+            std::cout << "\n";
             bonus = salary * 0.05;
             std::cout << "Your bonus this year is: $" << bonus;
             std::cout << "\n";
             netBonus = salary + bonus;
-            std::cout << "Your total salary with the bonus this year is: $" << netBonus;
+            std::cout << "Your total salary with the bonus this year is: "
+            "$" << netBonus;
         } else if (yearsWorkedNumber == 4) {
-            std::cout << "Unfortunately you are not eligible for a bonus this year. Next year you will be eligible!\n";
+            std::cout << "Unfortunately you are not eligible for a bonus this "
+            "year. Next year you will be eligible!\n";
         } else if (yearsWorkedNumber == 3) {
-            std::cout << "Unfortunately you are not eligible for a bonus this year. In two years you will be eligible!\n";
+            std::cout << "Unfortunately you are not eligible for a bonus this "
+            "year. In two years you will be eligible!\n";
         } else if (yearsWorkedNumber == 2) {
-            std::cout << "Unfortunately you are not eligible for a bonus this year. In three years you will be eligible! \n";
+            std::cout << "Unfortunately you are not eligible for a bonus this "
+            "year. In three years you will be eligible! \n";
         } else {
-            std::cout << "Unfortunately you are not eligible for a bonus this year";
-    } 
+            std::cout << "Unfortunately you are not eligible for a "
+            "bonus this year";
+    }
     } catch (std::invalid_argument) {
         std::cout << "That is not a number! \n";
     }
-}    
+}
 
